@@ -1,21 +1,10 @@
 import React, { useEffect } from 'react';
 import Modal from 'react-modal';
 import styles from './ImageModal.module.css';
-
-interface Image {
-  urls: {
-    regular: string;
-  };
-  alt_description?: string;
-  description?: string;
-  user: {
-    name: string;
-  };
-  likes: number;
-}
+import { ImageData } from '../../services/api'; 
 
 interface ImageModalProps {
-  image: Image | null;
+  image: ImageData | null; 
   onClose: () => void;
 }
 

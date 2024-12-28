@@ -23,7 +23,7 @@ export interface ApiResponse {
 
 export const fetchImages = async (query: string, page: number = 1): Promise<ApiResponse> => {
   try {
-    const response = await axios.get(API_URL, {
+    const response = await axios.get<ApiResponse>(API_URL, {
       params: {
         query: query,
         page: page,
