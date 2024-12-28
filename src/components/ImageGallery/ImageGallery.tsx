@@ -1,21 +1,10 @@
 import React from 'react';
+import { ImageData } from '../../services/api';
 import styles from './ImageGallery.module.css';
 
-interface Image {
-  id: string;
-  urls: {
-    small: string;
-  };
-  alt_description?: string;
-  user: {
-    name: string;
-  };
-  likes: number;
-}
-
 interface ImageGalleryProps {
-  images: Image[];
-  onImageClick: (image: Image) => void;
+  images: ImageData[];
+  onImageClick: (image: ImageData) => void; 
 }
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images, onImageClick }) => {
